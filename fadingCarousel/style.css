@@ -1,0 +1,91 @@
+body {
+	color: white;
+	background: black;
+}
+
+.carousel {
+	justify-content: center;
+	margin: 0px 8vw;
+	position: relative;
+	display: flex;
+}
+
+#carouselWrapper {
+	position: relative;
+	height: 500px;
+	width: 200px;
+}
+
+.carousel__item {
+	border: 1px solid white;
+	position: absolute;
+	height: 400px;
+	width: 100%;
+	background: rgba(200, 200, 200, 1);
+	transition: 0.75s filter, 1.5s transform, 0.75s inset;
+}
+
+.carousel__item--active {
+	inset: 0;
+	z-index: 4;
+}
+
+.carousel__item--left15 {
+	transform: rotate(-5deg);
+	left: -40%;
+	top: 5%;
+	z-index: 3;
+	filter: brightness(50%);
+}
+
+.carousel__item--right15 {
+	transform: rotate(5deg);
+	top: 5%;
+	left: 60%;
+	z-index: 2;
+	filter: brightness(50%);
+}
+
+.carousel__item--left30 {
+	transform: rotate(-10deg);
+	left: -100%; top: 10%; 
+	z-index: 1;
+	filter: brightness(30%);
+}
+
+.carousel__item--right30 {
+	transform: rotate(10deg);
+	left: 100%;
+	top: 10%;
+	z-index: 0;
+	filter: brightness(30%);
+}
+
+.carousel__content {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.carousel__controls {
+	position: absolute;
+	inset: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	z-index: 69;
+}
+
+.carousel__controls > button {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	background: rgba(255, 255, 255, 0.5);
+	border: 1px solid white;
+	width: 50px;
+	aspect-ratio: 1;
+}
+
+#carousel__controlRight {
+	position: absolute;
+	right: 0; top:0;
+}
