@@ -89,3 +89,11 @@ body {
 	position: absolute;
 	right: 0; top:0;
 }
+
+footer {
+	text-align: center;
+}
+a {
+	font-weight: bold;
+	color: white;
+}
